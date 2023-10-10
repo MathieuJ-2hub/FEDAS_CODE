@@ -1,7 +1,5 @@
 Ce projet contient une application Streamlit qui utilise un modèle RandomForest pour prédire les FEDAS CODES en fonction des caractéristiques des produits. 
 
-Pour faire fonctionner l'application en local, il faut d'abord faire tourner le notebook et exporter un modèle sous le nom "rf_model.pkl" et placer ce modèle dans le fichier Deploy_POC. Initialement ce modèle devait dirèectement être incorporer dans ce repos. Mais cela a échoué à cause de sa volumétrie. 
-
 Exploration des données : 
 L'exploration des données a été menée dans le Jupyter notebook EDAFEDAS.ipynb. Nous avons conclus un ensemble de variables pertinentes pour entrainer un modèle de prédiction. Nous n'utilisons que des variables prétraitée afin de réduire la cardinalité de chaque variable et évité l'overfitting. 
 
@@ -24,7 +22,7 @@ Nous avons un script interface utilisateur stream.py qui permet d'utiliser l'app
 L'application peut être testée en local en exécutant la commande : 
     streamlit run Stream.py
 dans le dossier Deploy_POC. 
-Mais il faut toutes les bonnes dépendances. 
+Mais il faut toutes les bonnes dépendances. Pour faire fonctionner l'application en local, il faut d'abord faire tourner le notebook et exporter un modèle sous le nom "rf_model.pkl" et placer ce modèle dans le fichier Deploy_POC. Initialement ce modèle devait dirèctement être incorporé dans ce repos. Mais cela a échoué à cause de sa volumétrie. 
 
 Ainsi pour le déployement de l'application chez un client nous avons créé un Dockerfile avec un fichier requirement.txt permettant de créer une image de l'application avec toutes les dépendances et de la déployer via un conteneur chez le client. 
 
@@ -52,7 +50,7 @@ Une fois l'image Docker téléchargée, vous pouvez exécuter l'application avec
     Ouvrez un navigateur web et allez à l'adresse http://localhost:8501. Vous devriez voir l'interface de l'application Streamlit.
 
 Comment utiliser l'application:
-L'application vous permet de le jeu à prédire et elle utilise un modèle de Random Forest plus légé que dans l'EDA pour prédire les FEDAS CODE. Vous pouvez choisir les dossier d'export. 
+L'application vous permet de prédire le FEDAS CODE en choissant le chemin du jeu test et elle utilise un modèle de Random Forest plus légé que dans l'EDA pour prédire les FEDAS CODE. Vous pouvez choisir les dossier d'export. 
 
 Liste de bonnes pratiques à mettre en place pour poursuivre le développement: 
 -Versionning du code avec un git repository.
