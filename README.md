@@ -1,6 +1,6 @@
 Ce projet contient une application Streamlit qui utilise un modèle RandomForest pour prédire les FEDAS CODES en fonction des caractéristiques des produits. 
 
-Pour faire fonctionner l'application en local, il faut d'abord faire tourner le notebook et exporter un modèle sous le nom "rf_model.pkl" et placer ce modèle dans le fichier Deploy_POC. Initialement ce modèle devait dirèectement être incorporer dans ce repos. Mais cela a échoué à cause de sa volumétrie.
+Pour faire fonctionner l'application en local, il faut d'abord faire tourner le notebook et exporter un modèle sous le nom "rf_model.pkl" et placer ce modèle dans le fichier Deploy_POC. Initialement ce modèle devait dirèectement être incorporer dans ce repos. Mais cela a échoué à cause de sa volumétrie. 
 
 Exploration des données : 
 L'exploration des données a été menée dans le Jupyter notebook EDAFEDAS.ipynb. Nous avons conclus un ensemble de variables pertinentes pour entrainer un modèle de prédiction. Nous n'utilisons que des variables prétraitée afin de réduire la cardinalité de chaque variable et évité l'overfitting. 
